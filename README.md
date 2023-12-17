@@ -668,6 +668,21 @@ That's it! You've successfully installed and set up Grafana to work with Prometh
 
 2. **Configure Prometheus Plugin Integration:**
     - Integrate Jenkins with Prometheus to monitor the CI/CD pipeline.
+  
+  ```bash
+    post {
+     always {
+        emailext attachLog: true,
+            subject: "'${currentBuild.result}'",
+            body: "Project: ${env.JOB_NAME}<br/>" +
+                "Build Number: ${env.BUILD_NUMBER}<br/>" +
+                "URL: ${env.BUILD_URL}<br/>",
+            to: 'flidoxgr@gmail.com',  #change Your mail
+            attachmentsPattern: 'trivyfs.txt,trivyimage.txt'
+        }
+    }
+
+    ```      
 
 
 **Phase 5: Notification**

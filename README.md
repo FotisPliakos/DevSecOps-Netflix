@@ -669,7 +669,7 @@ That's it! You've successfully installed and set up Grafana to work with Prometh
 2. **Configure Prometheus Plugin Integration:**
     - Integrate Jenkins with Prometheus to monitor the CI/CD pipeline.
   
-  ```bash
+  ```groovy
     post {
      always {
         emailext attachLog: true,
@@ -681,9 +681,7 @@ That's it! You've successfully installed and set up Grafana to work with Prometh
             attachmentsPattern: 'trivyfs.txt,trivyimage.txt'
         }
     }
-
-    ```      
-
+```
 
 **Phase 5: Notification**
 

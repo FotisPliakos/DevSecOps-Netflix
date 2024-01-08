@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: netflix-app
-        image: fotispliakos/netflix:latest
+        image: nginx:latest
         ports:
         - containerPort: 80
